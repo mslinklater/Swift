@@ -128,3 +128,49 @@ for(type, numbers) in interestingNumbers {
 }
 print(largest)
 print(largestType)
+
+// Mine - getting a substring by indeices
+let myString = "This is the end"
+let start = myString.index(myString.startIndex, offsetBy: 5)
+let end = myString.index(start, offsetBy: 2)
+let sub: String = String(myString[start..<end])
+print(sub)
+
+var n = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+
+var m = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+
+var total = 0
+            for i in 0..<4 {
+    total += i
+}
+print(total)
+
+func greet(_ person: String, on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet("Bob", on: "Tuesday")
+
+func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score > max {
+            max = score
+        } else if score < min {
+            min = score
+        }
+        sum += score
+    }
+    return (min, max, sum)
+}
